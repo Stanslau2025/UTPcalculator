@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTP Cable Measurements Calculator</title>
+
+
+
+
+
+<link rel="stylesheet" href="hotbando.css">
+
+
+
+</head>
+<body>
+    <a href="hotbando tool latest version.html"><p><button> white theme</button></p></a>
+    <div class="container">
+        <div>
+            <h1>UTP CABLE MEASUREMENTS CALCULATOR </h1>
+            
+        <a href="hotbando tool latest version.html">
+            <p>
+                <button> white theme</button>
+            </p>
+        </a>
+   
+        </div>
+        
+
+
+
+        <div class="info">Current phone scale: 1m = 12.20 px</div>
+        <div class="units">
+            G and R are measured in <strong>pixels (px)</strong>.<br>
+            DA and y are measured in <strong>meters (m)</strong>.<br>
+            1 Hf (Human Footstep) = <strong>0.8 meters</strong>.
+        </div>
+
+        <!-- Relationship Selector -->
+        <div class="form-group">
+            <label for="relation">Choose a Calculation:</label>
+            <select id="relation">
+                <option value="1">1. Relationship of Measurements (G, R) = (y * Scale, DA * Scale)</option>
+                <option value="2">2. Real Distance of UTP Cable (y = (DA * G) / R)</option>
+                <option value="3">3. Number of Human Footsteps on real cable (X = (DA * G) / 0.8R)</option>
+                <option value="4">4. UTP Cable Distance on Phone Screen Scale (G = (0.8R * X) / DA)</option>
+                <option value="5">5. Real Distance Between Source and Access Point (DA = (y * R) / G)</option>
+                <option value="6">6. Change Phone Scale</option>
+                <option value="7">7. Convert Footsteps into Meters and Pixels</option>
+                <option value="8">8. Arranged data of previous calculations in measurements</option>
+            </select>
+        </div>
+
+        <!-- Input Fields -->
+        <div class="form-group" id="y-input-group" style="display:none;">
+            <label for="y-input">Enter y (real UTP cable distance in meters):</label>
+            <input type="number" id="y-input" placeholder="Enter y value">
+        </div>
+
+        <div class="form-group" id="da-input-group" style="display:none;">
+            <label for="da-input">Enter DA (real radius distance in meters):</label>
+            <input type="number" id="da-input" placeholder="Enter DA value">
+        </div>
+
+        <div class="form-group" id="g-input-group" style="display:none;">
+            <label for="g-input">Enter G (UTP cable distance in pixels):</label>
+            <input type="number" id="g-input" placeholder="Enter G value">
+        </div>
+
+        <div class="form-group" id="r-input-group" style="display:none;">
+            <label for="r-input">Enter R (radius distance in pixels):</label>
+            <input type="number" id="r-input" placeholder="Enter R value">
+        </div>
+
+        <div class="form-group" id="x-input-group" style="display:none;">
+            <label for="x-input">Enter X (number of human footsteps on real cable):</label>
+            <input type="number" id="x-input" placeholder="Enter X value">
+        </div>
+
+        <div class="form-group" id="c-input-group" style="display:none;">
+            <label for="c-input">Enter C (number of human footsteps):</label>
+            <input type="number" id="c-input" placeholder="Enter C value">
+        </div>
+
+        <div class="form-group" id="scale-input-group" style="display:none;">
+            <label for="scale-input">Enter Scale (optional, default is current scale):</label>
+            <input type="number" id="scale-input" placeholder="Enter new scale value">
+        </div>
+
+        <button id="calculate-btn">CALCULATE</button>
+
+        <!-- Results -->
+        <div class="result" id="result">Result will be displayed here</div>
+
+        <footer>
+            © 2024༺ M A L O ༻UNIVERS company. All Rights Reserved.
+        </footer>
+    </div>
+    <script src="hotbando.js"></script>
+</body>
+</html>

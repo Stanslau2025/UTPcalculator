@@ -1,0 +1,203 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #191e25;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background: #c2c1c1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b2d5e;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure header text wraps on smaller screens */
+}
+
+/* Info Display */
+.info {
+    background: #e7f2ff;
+    color: #00509e;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Wrap long text */
+}
+
+/* Units Note */
+.units {
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    word-wrap: break-word; /* Wrap long text */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    color: #333;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    appearance: none;
+}
+
+/* Select Dropdown */
+.form-group select {
+    cursor: pointer;
+    white-space: normal; /* Ensure text wraps within dropdown */
+    word-wrap: break-word; /* Allow word breaking in dropdown options */
+    overflow: visible; /* Ensure dropdown doesn't truncate long text */
+}
+
+/* Dropdown Options */
+.form-group select option {
+    white-space: normal; /* Wrap long text inside options */
+    padding: 8px;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Input and Select Focus */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0078d4;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 120, 212, 0.4);
+    background-color: #ffffff;
+}
+
+/* Calculate Button */
+button {
+    background: #0078d4;
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #005ba1;
+}
+
+/* Results Section */
+.result {
+    background-color: #eef4ff;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+    text-align: left;
+    word-wrap: break-word; /* Ensure results wrap for readability */
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* Result Item Styling */
+.result-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    word-wrap: break-word; /* Ensure result items wrap */
+}
+
+.result-item strong {
+    font-weight: bold;
+}
+
+.editable-value {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: text;
+    font-size: 14px;
+    text-align: center;
+    min-width: 40px;
+    position: relative; /* To position the placeholder */
+}
+
+/* Highlight input on focus */
+.editable-value:focus {
+    outline: none;
+    border-color: #0078d4;
+    background-color: #f0f9ff;
+}
+
+/* Placeholder for .00 */
+.editable-value::after {
+    content: ".00";
+    position: absolute;
+    right: 8px; /* Align to the right of the input */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d1d5db; /* Light grey for subtle appearance */
+    pointer-events: none; /* Prevent interaction */
+    visibility: hidden; /* Hidden by default */
+}
+
+/* Show placeholder when the value lacks a decimal */
+.editable-value[data-placeholder="true"]::after {
+    visibility: visible;
+}
+
+/* Optional hover effect for better UX */
+.editable-value:hover {
+    border-color: #3b82f6;
+}
